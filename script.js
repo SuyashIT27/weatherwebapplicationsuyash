@@ -12,7 +12,7 @@ function show_result() {
   let givenInput = input.value;
   result.innerText = givenInput;
   let api = "ae71799cd0cd41639f755659250612";
-  url = `http://api.weatherapi.com/v1/current.json?key=${api}&q=${givenInput}`;
+  url = `https://api.weatherapi.com/v1/current.json?key=${api}&q=${givenInput}`;
   console.log(url);
   data(url).then((result) => {
     temp.innerText = result.temp + "°C";
@@ -25,7 +25,7 @@ function show_result() {
 }
 
 let data = async (link) => {
-  const getData = await fetch(link);
+  const getData = await fetch(link, { mode: "cors" });
   let status = await getData.ok;
   let respense = await getData.status;
   const extractData = await getData.json();
@@ -39,3 +39,4 @@ let data = async (link) => {
   console.log(temp, tempMax1, Humidity1, Cloudy1, Wind);
   return { temp, tempMax1, Humidity1, Cloudy1, Wind, location1 };
 };
+
