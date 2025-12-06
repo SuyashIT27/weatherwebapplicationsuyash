@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather UI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="left-info">
+        <h1 id="temp">N/A</h1>
+        <div class="city" id="output">N/A</div>
+        <div class="time" id="Locationn">N/A</div>
+      </div>
+      <div class="details">
+        <div class="input-field">
+          <input
+            type="text"
+            class="text"
+            id="text"
+            placeholder="Search Location..."
+          />
+          <button class="search" onclick="show_result()">
+            <img src="search.png" class="search-icon" />
+          </button>
+        </div>
+
+        <p class="heading">Weather Details...</p>
+
+        <!-- <h3 class="condition">THUNDERSTORM WITH LIGHT DRIZZLE</h3> -->
+
+        <div class="rows">
+          <div class="row">
+            <span>Feels Like</span>
+            <span id="tempMax">N/A</span>
+          </div>
+          <div class="row">
+            <span>Humidity</span>
+            <span id="Humidity">N/A</span>
+          </div>
+          <div class="row">
+            <span>Cloudy</span>
+            <span id="Cloudy">N/A</span>
+          </div>
+          <div class="row">
+            <span>Wind</span>
+            <span id="Wind">N/A</span>
+          </div>
+        </div>
+
+        <hr />
+
+        <!-- <p class="forecast-title">Today's Weather Forecast...</p> -->
+
+        <!-- <div class="forecast">
+          <div class="forecast-item">
+            <div class="icon">❄</div>
+            <div class="time">N/A</div>
+            <div class="type">N/A</div>
+          </div>
+          <div class="temp-small">N/A</div>
+        </div>
+      </div> -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
